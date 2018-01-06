@@ -7,3 +7,6 @@ architectures.
 
 If you build this, it is likely you will need to update the FHEM revision in
 the Dockerfile.
+
+Unlike other FHEM images on the hub, this one does not have its own init system
+or sshd.

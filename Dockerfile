@@ -34,4 +34,6 @@ WORKDIR /opt/fhem/
 # -d prevents fhem from going to background.
 # That switch also overrides the logfile, so that the
 # logs go to stdout
+# We could also set ENTRYPOINT to fhem.pl and give the args
+# via CMD, thus making the image more easily usable as client
 CMD ["/usr/bin/perl", "fhem.pl", "-d", "fhem.cfg"]

@@ -29,6 +29,9 @@ RUN apt-get install -y \
 RUN cpanm \
     Net::MQTT::Simple::SSL \
     Net::MQTT::Constants
-WORKDIR /opt/fhem/
 USER fhem
-ENTRYPOINT ["/usr/bin/perl", "fhem.pl", "fhem.cfg"]
+WORKDIR /opt/fhem/
+# -d prevents fhem from going to background.
+# That switch also overrides the logfile, so that the
+# logs go to stdout
+CMD ["/usr/bin/perl", "fhem.pl", "-d", "fhem.cfg"]

@@ -2,9 +2,9 @@
 #docker volume create fhem-config
 #docker volume create fhem-logs
 docker run \
+    --detach=true \
     -v fhem-config:/ec/fhem/ \
     -v fhem-logs:/opt/fhem/log \
-    --detach=true \
     --name=fhem \
     --restart=unless-stopped \
     -p 7072:7072 \

@@ -36,4 +36,4 @@ WORKDIR /opt/fhem/
 # logs go to stdout
 # We could also set ENTRYPOINT to fhem.pl and give the args
 # via CMD, thus making the image more easily usable as client
-CMD ["/usr/bin/perl", "fhem.pl", "-d", "fhem.cfg"]
+CMD ["/usr/bin/perl", "fhem.pl", "-d", "/etc/fhem/fhem.cfg"]
